@@ -1,23 +1,23 @@
 package Ders_2;
 
+import java.util.Scanner;
 
-public class ATM {
-
+public class Q1 {
    /* ATM
-Kullanicidan giriş için kart numarasi ve şifresini isteyin, eger herhangi birini yanlis girerse tekrar isteyin.
-Kart numarasi aralarda boşluk ile girerse de eger doğruysa kabul edin.
-Kart numarasi ve sifre dogrulanirsa kullanicinin yapabileceği işlemleri ekrana yazdirin,
+    Kullanicidan giriş için kart numarasi ve şifresini isteyin, eger herhangi birini yanlis girerse tekrar isteyin.
+    Kart numarasi aralarda boşluk ile girerse de eger doğruysa kabul edin.
+    Kart numarasi ve sifre dogrulanirsa kullanicinin yapabileceği işlemleri ekrana yazdirin,
 
 
-Menu listesinde Bakiye sorgula, para yatirma, para çekme, para gönderme, sifre değiştirme ve cikis islemleri olacaktır.
+    Menu listesinde Bakiye sorgula, para yatirma, para çekme, para gönderme, sifre değiştirme ve cikis islemleri olacaktır.
 
 
-Para çekme ve para gonderme işleminde mevcut bakiyeden buyuk para çekilemez,
+    Para çekme ve para gonderme işleminde mevcut bakiyeden buyuk para çekilemez,
 
-Para gönderme işleminde istenen iban TR ile baslamali ve toplam 26 karakterli olmali, eger değilse menü ekranina geri donsun.
+    Para gönderme işleminde istenen iban TR ile baslamali ve toplam 26 karakterli olmali, eger değilse menü ekranina geri donsun.
 
-Sifre değiştirme işleminde mevcut şifreyi teyit ettikten sonra, sifre değişiklik işlemini yapmali,
-     */
+    Sifre değiştirme işleminde mevcut şifreyi teyit ettikten sonra, sifre değişiklik işlemini yapmali,
+            */
 
     static String kartNo = "123456";
     static String sifre = "1234";
@@ -29,14 +29,11 @@ Sifre değiştirme işleminde mevcut şifreyi teyit ettikten sonra, sifre deği�
     }
 
     public static void giris() {
-
-    }
         /*
         Kullanicidan giriş için kart numarasi ve şifresini isteyin, eger herhangi birini yanlis girerse tekrar isteyin.
 Kart numarasi aralarda boşluk ile girerse de eger doğruysa kabul edin.
 Kart numarasi ve sifre dogrulanirsa kullanicinin yapabileceği işlemleri ekrana yazdirin,
-
-         /*
+         */
         System.out.print("KART NUMARASI GIRINIZ:  ");
         String kKartNo = scan.nextLine().replace(" ", "");
         System.out.print("SIFRENIZI GIRINIZ:  ");
@@ -52,9 +49,7 @@ Kart numarasi ve sifre dogrulanirsa kullanicinin yapabileceği işlemleri ekrana
     }
 
     public static void menu() {
-
         //Menu listesinde Bakiye sorgula, para yatirma, para çekme, para gönderme, sifre değiştirme ve cikis islemleri olacaktır.
-
         System.out.print("*****NUTELLA BANK*****\n" +
                 "1. BAKIYE SORGULAMA\n" +
                 "2. PARA YATIRMA\n" +
@@ -111,14 +106,11 @@ Kart numarasi ve sifre dogrulanirsa kullanicinin yapabileceği işlemleri ekrana
     //kullanıcıya 3 hak verelim. doğru şifre giremezse sistemden çıkş yapsın
 
     public static void paraGonderme() {
-
-    }
         /*
         Para çekme ve para gonderme işleminde mevcut bakiyeden buyuk para çekilemez,
 
         Para gönderme işleminde istenen iban TR ile baslamali ve toplam 26 karakterli olmali, eger değilse menü ekranina geri donsun.
          */
-
         scan.nextLine();// dummy
         System.out.print("PARA GONDERILECEK IBANI GIRINIZ: ");
         String iban = scan.nextLine().toUpperCase().replace(" ", "");
@@ -139,9 +131,7 @@ Kart numarasi ve sifre dogrulanirsa kullanicinin yapabileceği işlemleri ekrana
     }
 
     public static void paraCekme(double miktar) {
-
         //Para çekme ve para gonderme işleminde mevcut bakiyeden buyuk para çekilemez,
-
         if (miktar <= bakiye) {
             bakiye -= miktar;// bakiye=bakiye-miktar;
             bakiyeSorgula();
@@ -164,5 +154,7 @@ Kart numarasi ve sifre dogrulanirsa kullanicinin yapabileceği işlemleri ekrana
         menu();
     }
 }
+
+
 
 
